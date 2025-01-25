@@ -1,0 +1,773 @@
+
+
+body, h1, p, div {
+  font-family: 'dana', sans-serif;
+}
+
+.nav-fix-part {
+  position: fixed;
+  z-index: 9999999999;
+}
+.nav-img-part img {
+  position: fixed !important;
+  top: 0; /* یا مقدار دیگری که برای جایگذاری صحیح است */
+  left: 0; /* یا مقدار دیگری که برای جایگذاری صحیح است */
+  z-index: 1000; /* مقدار بالاتر برای جلو بودن */
+}
+
+.bg-search {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  width: 40%;
+  border-radius: 1rem;
+}
+
+.bg-search::placeholder {
+  background-color: #f0f0f0;
+  border-color: transparent;
+  font-size: smaller;
+}
+
+.border-color:focus,
+.border-color:active {
+  border: none;
+  outline: none;
+}
+
+.fa-search {
+  font-size: 25px !important;
+}
+
+.button-design {
+  border-left: 1px solid rgb(68, 68, 68);
+  height: 25px !important;
+  position: relative;
+  top: 8px;
+}
+
+.container-button {
+  border: 1px solid #a8843a;
+  border-radius: 10px;
+}
+
+.text-button {
+  margin-left: 0px;
+}
+
+.design-shoping-cart {
+  border-color: #d7dee0;
+}
+
+.design-shoping-cart:hover {
+  border-color: #d7dee0;
+  border-radius: 2rem;
+}
+
+.fa-shopping-cart {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.material-symbols-outlined {
+  display: none;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 95%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1000;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 1rem;
+}
+
+.searh-input-search {
+  border-bottom: 1px solid #a8843a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.design-shoping-cart {
+  position: relative;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 80px;
+  background-color: #555;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 2rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.design-shoping-cart:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.border-menu {
+  /* border-right: 1px solid rgb(146, 141, 141); */
+  height: 30px;
+  color: #2962ff;
+}
+
+.border-menu:hover {
+  color: #2962ff;
+  border-right: 1px solid rgb(146, 141, 141);
+}
+
+.design-btn .btn {
+  color: #5e5a5a;
+  font-size: 13px;
+}
+.carousel-indicators {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 370px;
+}
+.carousel-control-prev {
+  right: 70px;
+  bottom: 20px;
+}
+.carousel-control-next {
+  right: 20px;
+  bottom: 20px;
+}
+
+.carousel-control-next-icon {
+  background-size: 100%, 100%;
+  left: -100px;
+  position: relative;
+  width: 200px;
+}
+.carousel-control-prev-icon {
+  background-size: 100%, 100%;
+  left: -100px;
+  position: relative;
+  width: 200px;
+}
+
+.carousel-inner img {
+  height: 500px;
+}
+.swiper-slide img {
+  width: 50%; /* Make the image take the full width of its container */
+  margin: 0; /* Remove margin between images */
+  object-fit: cover; /* Ensure images cover their container */
+  border: 2px solid red; /* Red border */
+  transition: transform 0.3s, border-color 0.3s; /* Smooth transition */
+  border-radius: 50%;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  border-color: darkred; /* Darker red border on hover */
+}
+
+.swiper-slide {
+  padding: 10px; /* Remove padding to reduce space between slides */
+}
+
+.responsive-container {
+  border: 5px solid red;
+  width: 95%;
+  border-radius: 20px;
+}
+
+.swiper-slide__off img {
+  width: 90%;
+  height: 12rem !important;
+  margin: 0;
+  object-fit: cover;
+  border-top: 5px solid red;
+  transition: transform 0.3s, border-color 0.3s;
+  border-radius: 1%;
+  padding: 10px;
+}
+
+.swiper-slide__off2 img {
+  border-top: 5px solid rgb(255, 255, 255);
+  width: 90%;
+  margin-top: 30px;
+}
+
+.swiper-slide__off:hover img {
+  transform: scale(1.1);
+  border-color: darkred;
+}
+
+.swiper-slide__off {
+  padding: 10px;
+}
+
+.add-item img {
+  padding: 0 20px 020px;
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 230px;
+}
+.relative-part {
+  position: absolute;
+  left: 80px;
+  margin-top: 15px;
+}
+
+.swiper-slide__mobile_product img {
+  width: 90%;
+  height: 12rem;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+.brand_mobile_img img {
+  width: 15rem;
+}
+
+/* .scroll-hideOut{
+position: relative !important;
+} */
+
+.col .border:hover {
+  border: 2px solid #7385b1 !important;
+}
+
+.width-img-airpods img {
+  width: 13rem;
+}
+
+.radius-part-in__shape img {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  left: 13px;
+}
+
+.swiper-slide-brand img {
+  width: 80%;
+}
+.responsive__BIGBrand {
+  border-color: #dba82b !important;
+}
+
+.btn-hover_part {
+  position: relative;
+  overflow: hidden;
+  background-color: #d7d7d7;
+}
+
+.btn-hover_part p {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0;
+  transition: bottom 0.3s ease-in-out;
+}
+.btn-hover_part {
+  position: relative; /* برای موقعیت‌دهی نسبت به متن */
+  overflow: hidden; /* مخفی کردن متن اضافی */
+}
+
+.btn-hover_part p {
+  position: absolute; /* برای موقعیت‌دهی متن نسبت به والد */
+  bottom: -100%; /* مخفی کردن متن در حالت عادی */
+  left: 0;
+  width: 100%;
+  background-color: #212121; /* رنگ پس‌زمینه متن */
+  color: white; /* رنگ متن */
+  transition: bottom 0.3s ease, background-color 0.3s ease; /* انیمیشن برای تغییر موقعیت و رنگ */
+  padding: 10px; /* برای بهتر نمایش دادن متن */
+}
+
+.design-font {
+  line-height: 1.6;
+  color: #333 !important;
+  background-color: #f9f9f9 !important;
+}
+.design-font > h3 {
+  color: #525252 !important;
+  font-size: 20px;
+}
+
+.design-font h4 {
+  color: #525252 !important;
+  font-size: 17px;
+}
+.design-font p {
+  color: #7e7f7f;
+  font-size: 15px;
+}
+.img-size img {
+  width: 8%;
+  border-radius: 10px;
+}
+/* Ensuring the buttons remain in a row on larger screens */
+.offcanvas-design {
+  flex-direction: row;
+  gap: 10px; /* Optional: Adds some spacing between the buttons */
+}
+
+/* Custom styling for collapse functionality */
+.list-group-item {
+  padding-left: 20px;
+}
+.mobile-btn-pos {
+  position: absolute;
+  right: 10px;
+}
+/* Positioning the submenus to open to the left */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu-right {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%; /* Open to the right */
+  margin-top: -1px;
+  min-width: 400px; /* Adjust the width based on your content */
+  min-height: 400px;
+}
+
+.dropdown-item[role="button"] {
+  cursor: pointer;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-right {
+  display: block;
+}
+
+.dropdown-menu {
+  background-color: #fff; /* Ensure the background color is white or matches your design */
+  border: 1px solid #ddd; /* Optional: add a border for better visibility */
+  padding: 0.5rem; /* Optional: adjust padding as needed */
+}
+
+
+.dropdown-item i {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-item:hover i {
+  opacity: 1;
+}
+.dropdown-menu .dropdown-item {
+  color: #6c757d; /* رنگ text-secondary */
+  font-size: 20px; /* اندازه فونت */
+}
+
+
+
+@media only screen and (max-width: 425px) {
+  .swiper-slide p{
+   text-align: center;
+    font-size: 10px;
+    
+  }
+  .offcanvas-design {
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .responsive-hideout {
+    display: none;
+  }
+
+  .material-symbols-outlined {
+    display: inline;
+    margin-top: 10px;
+  }
+
+  .button-design {
+    display: none;
+  }
+
+  .navbar-brand img {
+    max-width: 50px;
+  }
+
+  .design-shoping-cart {
+    border-color: transparent;
+  }
+
+  .design-shoping-cart:active,
+  .design-shoping-cart:focus {
+    border-color: transparent;
+  }
+
+  .container-button {
+    position: relative;
+    right: 50px;
+    border-color: transparent;
+  }
+
+  .fs-responsive {
+    font-size: medium;
+    font-weight: lighter;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+  }
+
+  .container-button {
+    margin-left: auto;
+  }
+
+  .responsive-party {
+    display: flex;
+    position: relative;
+    top: 50px;
+  }
+
+  .bg-search::placeholder {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: smaller;
+  }
+
+  .bg-search {
+    background-color: transparent;
+    position: relative;
+    left: 25px;
+  }
+
+  .fa-search {
+    left: 10px;
+    position: relative;
+  }
+
+  .search-results {
+    max-height: 200px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #search-input {
+    width: calc(100% - 50px);
+  }
+
+  .input-group button {
+    width: 50px;
+    height: 38px;
+  }
+
+  .display-responsive {
+    display: none !important;
+  }
+
+  .tooltip-text {
+    display: none;
+  }
+  .carousel-indicators {
+    right: 10px;
+    bottom: 10px;
+    gap: 5px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: auto;
+    bottom: 10px;
+  }
+  .carousel-control-prev {
+    right: 50px;
+  }
+  .carousel-control-next {
+    right: 10px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px; /* اندازه کوچکتر برای دکمه‌های کنترل */
+    height: 40px;
+    top: 50%; /* مرکز کردن عمودی دکمه‌ها */
+    transform: translateY(-50%);
+  }
+  .carousel-indicators {
+    bottom: 10px; /* موقعیت پایین دکمه‌های نشانگر */
+  }
+  .carousel-indicators button {
+    width: 6px; /* اندازه کوچک‌تر دکمه‌های نشانگر */
+    height: 6px;
+  }
+  .carousel-inner img {
+    width: 100%; /* عرض کامل کاروسل */
+    height: 200px; /* حفظ نسبت تصویر */
+    object-fit: cover; /* پر کردن فضای کاروسل بدون تغییر نسبت تصویر */
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 100%, 100%;
+    left: 0px;
+    display: flex;
+  }
+  .swiper-slide img {
+    width: 100%; /* Make images take the full width of their container */
+  }
+
+  .swiper-slide {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+
+  .mySwiper {
+    space-between: 2; /* Adjust space between slides */
+    slides-per-view: 5; /* Show fewer slides on smaller screens */
+  }
+
+  .add-item {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .relative-part {
+    position: absolute;
+    left: 30px;
+    margin-top: 15px;
+    font-size: 10px;
+  }
+
+  .responsive__tara_ad img {
+    width: 100%;
+    height: 100px;
+  }
+
+  .responsive_ad2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .responsive_ad2 img {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    height: 270px;
+  }
+  .nav-fix-part {
+    position: relative;
+    z-index: 9999999999;
+  }
+
+  .column-responsive-button {
+    display: flex;
+    flex-direction: column;
+  }
+  .button-inner-responsive-column {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+  }
+  .width-responsive {
+    width: 100% !important;
+  }
+  .margin-responsiv {
+    margin-bottom: 20px;
+  }
+
+  .responsive-airpods {
+    flex-direction: column;
+    align-items: center;
+  }
+  .width-img-airpods {
+    width: 50%;
+    margin-bottom: 10px; /* برای فاصله بین آیتم‌ها */
+  }
+  .width-img-airpods img {
+    width: 100%;
+    height: auto; /* برای حفظ نسبت تصویر */
+  }
+  .width-img-airpods p {
+    font-size: 1.2rem; /* اندازه متن را نیز می‌توانید تنظیم کنید */
+  }
+  .responsive__BIGBrand {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-color: transparent !important ;
+  }
+
+  .radius-part-in__shape img {
+    width: 380px;
+    height: 80px;
+    border-radius: 20px !important;
+  }
+  .display__column-kitchen .d-flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .display__column-kitchen .btn {
+    flex: 0 1 calc(36% - 10px); /* عرض هر تصویر تقریباً 50% از عرض والد به علاوه فاصله */
+    margin: 5px; /* فاصله بین تصاویر */
+    box-sizing: border-box; /* برای احتساب حاشیه در عرض */
+  }
+
+  .display__column-kitchen img {
+    width: 100%; /* تنظیم عرض تصویر به 100% */
+    height: auto; /* حفظ نسبت ابعاد تصویر */
+  }
+
+  .display__column-kitchen p {
+    text-align: center; /* تنظیم متن در وسط */
+    margin-top: 5px; /* فاصله از تصویر */
+  }
+  .center-pargraph-kitchen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-slide__off2 img {
+    border-top: 5px solid rgb(255, 255, 255);
+    width: 90%;
+    margin-top: 10px;
+  }
+  .responsive-call-footer {
+    display: flex;
+    color: wheat;
+  }
+  .design-acc {
+    background-color: #142740 !important;
+    border: none;
+  }
+  /* حذف آیکون پیش‌فرض بوت‌استرپ */
+  .accordion-button::after {
+    display: none;
+  }
+
+  /* آیکون پیش‌فرض چرخانده نشده (به سمت پایین) */
+  .accordion-icon i {
+    transition: transform 0.3s ease; /* افزودن انتقال برای چرخش نرم */
+  }
+
+  /* آیکون وقتی آکاردئون باز است (چرخیده به سمت بالا) */
+  .accordion-button:not(.collapsed) .accordion-icon i {
+    transform: rotate(180deg);
+  }
+  .footer-contact {
+    display: block;
+  }
+  .footer-contact p {
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 15px;
+  }
+  .responsive-img-footer {
+    width: 10rem !important;
+  }
+
+  .footer-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-top-content img,
+  .footer-top-content #backToTopBtn {
+    margin: 10px 0;
+  }
+  .img-size img {
+    width: 60px; /* Adjust this value for smaller screens */
+  }
+  .mobile-btn-pos {
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.offcanvas-design {
+  display: flex;
+  flex-wrap: nowrap; /* اطمینان از عدم شکست خطوط */
+  gap: 2px; /* فاصله بین دکمه‌ها */
+}
+
+.offcanvas-design .dropdown {
+  flex: 1; /* هر دکمه به طور مساوی فضای موجود را پر می‌کند */
+}
+
+.offcanvas-design .btn {
+  margin: 0; /* حذف حاشیه پیش‌فرض دکمه‌ها */
+  padding: 5px 8px; /* تنظیم پدینگ برای فشرده‌تر کردن دکمه‌ها */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .responsive-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .responsive-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide__off img {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-slide__off img {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide__off img {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .swiper-slide__off img {
+    height: 4rem;
+  }
+}
