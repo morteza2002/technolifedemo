@@ -4,6 +4,24 @@ body, h1, p, div {
   font-family: 'dana', sans-serif;
 }
 
+#responsive-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#responsive-warning img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
 .nav-fix-part {
   position: fixed;
   z-index: 9999999999;

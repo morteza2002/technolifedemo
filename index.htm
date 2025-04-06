@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="webfonts25/fontiran.css">
   </head>
   <body >
+
+    <div id="responsive-warning" style="display: none;">
+      <img src="images/responsive-warning.png" alt="فقط در سایزهای خاص قابل مشاهده است" style="max-width: 100%; height: auto;">
+    </div>
+    <div id="main-site">
     <div class="nav-img-part">
       <img src="images/bg-head.png" alt="" width="100%" />
     </div>
@@ -4716,6 +4721,34 @@
     >
       <p class="text-center text-light p-1">design by morteza2002</p>
     </div>
+
+    </div>
+    <script>
+      function checkViewport() {
+      const width = window.innerWidth;
+      const allowedWidths = [425, 768, 1440];
+    
+      const site = document.getElementById("main-site");
+      const warning = document.getElementById("responsive-warning");
+    
+      if (!site || !warning) {
+        console.warn("main-site یا responsive-warning وجود نداره.");
+        return;
+      }
+    
+      if (allowedWidths.includes(width)) {
+        site.style.display = "block";
+        warning.style.display = "none";
+      } else {
+        site.style.display = "none";
+        warning.style.display = "block";
+      }
+    }
+    
+    window.addEventListener("load", checkViewport);
+    window.addEventListener("resize", checkViewport);
+    
+      </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
