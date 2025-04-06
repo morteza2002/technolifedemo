@@ -4724,29 +4724,29 @@
 
     </div>
     <script>
-      function checkViewport() {
-      const width = window.innerWidth;
-      const allowedWidths = [425, 768, 1440];
-    
-      const site = document.getElementById("main-site");
-      const warning = document.getElementById("responsive-warning");
-    
-      if (!site || !warning) {
-        console.warn("main-site یا responsive-warning وجود نداره.");
-        return;
-      }
-    
-      if (allowedWidths.includes(width)) {
-        site.style.display = "block";
-        warning.style.display = "none";
-      } else {
-        site.style.display = "none";
-        warning.style.display = "block";
-      }
-    }
-    
-    window.addEventListener("load", checkViewport);
-    window.addEventListener("resize", checkViewport);
+function checkViewport() {
+  const width = window.innerWidth;
+
+  const site = document.getElementById("main-site");
+  const warning = document.getElementById("responsive-warning");
+
+  if (!site || !warning) {
+    console.warn("main-site یا responsive-warning وجود نداره.");
+    return;
+  }
+
+  if ((width >= 400 && width <= 450) || (width >= 1400 && width <= 1500)) {
+    site.style.display = "block";
+    warning.style.display = "none";
+  } else {
+    site.style.display = "none";
+    warning.style.display = "block";
+  }
+}
+
+window.addEventListener("load", checkViewport);
+window.addEventListener("resize", checkViewport);
+
     
       </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
